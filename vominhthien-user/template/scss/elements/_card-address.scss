@@ -1,0 +1,33 @@
+.card-address {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left {
+      p {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 15px;
+      }
+    }
+    .right {
+      text-align: right;
+      button {
+        display: inline-block;
+        margin-left: 20px;
+        span,
+        svg {
+          display: inline-block;
+          vertical-align: middle;
+        }
+        span {
+          margin-right: 5px;
+        }
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
+  }
+}

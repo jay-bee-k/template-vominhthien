@@ -1,0 +1,73 @@
+.card-pastelink {
+}
+
+.tag-pastelink {
+  background-color: #fff;
+  box-shadow: 0px 46px 92px rgba(71, 71, 71, 0.07),
+    0px 5.75991px 11.5198px rgba(71, 71, 71, 0.035);
+  border-radius: 200px;
+  padding: 8px;
+  width: 640px;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  @include max-media(500px) {
+    padding: 0;
+  }
+  &__button {
+    padding: 10px 15px;
+    background-color: $main-color;
+    color: #fff;
+    border-radius: 200px;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+    width: 134px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include max-media(500px) {
+      width: 45px;
+      width: unset;
+      border-radius: 50%;
+      padding: 10px;
+    }
+    span,
+    img {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    > img {
+      flex-shrink: 0;
+    }
+    span {
+      margin-left: 5px;
+      @include max-media(500px) {
+        display: none;
+      }
+    }
+  }
+  &__input {
+    display: inline-block;
+    width: calc(100% - 134px);
+    @include max-media(500px) {
+      width: calc(99% - 45px);
+    }
+    input {
+      appearance: none;
+      outline: none;
+      border: unset;
+      background-color: transparent;
+      padding: 10px;
+      font: inherit;
+      width: 100%;
+      &::placeholder {
+        color: $gray-sub;
+      }
+    }
+  }
+  &:hover {
+    .tag-pastelink__button {
+      background-color: $orange-hover;
+    }
+  }
+}

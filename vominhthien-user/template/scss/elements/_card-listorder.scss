@@ -1,0 +1,191 @@
+.card-listorder {
+}
+
+.card-itemorder {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    .right {
+      p,
+      a {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+    @include max-media(500px) {
+      .left {
+        width: 100%;
+      }
+      .right {
+        width: 100%;
+        display: flex;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  &__body {
+    .item-product {
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      &__info {
+        @include max-media(768px) {
+          width: 100% !important;
+        }
+      }
+      &__action {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .list-opiton {
+          ul {
+            display: flex;
+          }
+          ul > li {
+            padding: 0 10px;
+          }
+        }
+        .button-pay {
+          flex-shrink: 0;
+        }
+        @include max-media(768px) {
+          width: 100% !important;
+          margin-top: 10px;
+        }
+      }
+    }
+
+    &.DHTQ {
+      .item-product {
+        &__info {
+          display: flex;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          width: 60%;
+          @include max-media(768px) {
+            width: 100%;
+          }
+          .info-name {
+            width: 70%;
+            &__content {
+              display: flex;
+              .image {
+                width: 42px;
+                height: 42px;
+                flex-shrink: 0;
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+              .info {
+                padding-left: 10px;
+                a {
+                  display: block;
+                  &.text-and-icon {
+                    span {
+                      margin-left: 0;
+                      margin-right: 5px;
+                    }
+                  }
+                }
+              }
+            }
+            @include max-media(500px) {
+              width: 100%;
+            }
+          }
+          .info-quantity,
+          .info-price {
+            width: 15%;
+            padding: 0 10px;
+            @include max-media(500px) {
+              width: 25%;
+              padding-left: 0;
+              margin-top: 10px;
+            }
+          }
+        }
+        &__action {
+          width: 40%;
+        }
+      }
+      .total-products {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        .left {
+          width: 74%;
+          ul > li {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+          }
+          @include max-media(767px) {
+            width: 65%;
+          }
+          @include max-media(500px) {
+            width: 100%;
+          }
+        }
+        .right {
+          width: 26%;
+          display: flex;
+          justify-content: space-between;
+          @include max-media(767px) {
+            width: 35%;
+          }
+          @include max-media(500px) {
+            width: 100%;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+
+    &.TTH {
+      .item-product {
+        &__info {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          width: 70%;
+          // margin: -5px;
+          .info {
+            // padding-right: 10px;
+            padding: 5px;
+            &-content {
+              padding: 5px 0 0;
+            }
+            &:first-child {
+              padding-left: 0;
+            }
+          }
+          @include max-media(500px) {
+            justify-content: space-between;
+          }
+        }
+        &__action {
+          width: 30%;
+        }
+      }
+    }
+  }
+}
+
+.btn-green-pay {
+  background-color: $main-color;
+  padding: 8px 26px;
+  border-radius: 10px;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+  min-width: 120px;
+  &:hover {
+    background-color: $main-color-bold;
+  }
+}

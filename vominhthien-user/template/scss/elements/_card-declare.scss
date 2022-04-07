@@ -1,0 +1,276 @@
+.card-declare {
+  background-color: #ffffffcc;
+  position: relative;
+  &__header {
+    margin-bottom: 20px;
+    .form-group {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -5px -10px;
+      position: relative;
+      .form-input {
+        width: 33.33%;
+        padding: 5px 10px;
+        .input-have-icon {
+          position: relative;
+          .icon {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translate(0, -50%);
+            display: flex;
+          }
+          input {
+            padding-left: 50px !important;
+          }
+        }
+        @include max-media(700px) {
+          width: 50%;
+          padding: 5px;
+        }
+        @include max-media(500px) {
+          width: 100%;
+        }
+      }
+      @include max-media(700px) {
+        margin: -5px;
+      }
+      @include min-media(769px) {
+        padding: 0 50px;
+      }
+      .icon-decor {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        display: flex;
+        @include max-media(768px) {
+          display: none;
+        }
+      }
+    }
+  }
+  &__body {
+    padding-top: 20px;
+    border-top: 1px solid $gray-hover;
+    .top-bar {
+      display: flex;
+      margin-bottom: 20px;
+      padding: 0 15px;
+      .left,
+      .right {
+        width: 50%;
+      }
+      .right {
+        display: flex;
+        justify-content: center;
+        margin: -20px;
+        p {
+          width: 33.33%;
+          padding: 20px;
+        }
+      }
+      @include max-media(750px) {
+        display: none;
+      }
+    }
+    .list-product {
+      .item-product {
+        background-color: #fff;
+        box-shadow: 0px 159px 382px rgba(0, 0, 0, 0.15),
+          0px 66.4264px 159.59px rgba(0, 0, 0, 0.0287542),
+          0px 35.5147px 85.3247px rgba(0, 0, 0, 0.0238443),
+          0px 19.9093px 47.8323px rgba(0, 0, 0, 0.02),
+          0px 10.5737px 25.4034px rgba(0, 0, 0, 0.0161557),
+          0px 4.39994px 10.5709px rgba(0, 0, 0, 0.0112458);
+        border-radius: 8px;
+        border: 1px solid #eaebf0;
+        padding: 15px;
+        position: relative;
+        &__main {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .label {
+          display: none;
+          @include max-media(750px) {
+            display: block;
+          }
+        }
+        &__name,
+        &__prop {
+          width: 50%;
+          @include max-media(750px) {
+            width: 100%;
+          }
+        }
+        &__prop {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: -20px;
+          > div {
+            width: 33.33%;
+            padding: 20px;
+          }
+          .quantity {
+            .minor-and-phus {
+              justify-content: flex-start;
+              @include max-media(750px) {
+                justify-content: center;
+              }
+            }
+          }
+          .price {
+            > input {
+              max-width: 100px;
+            }
+            @include max-media(750px) {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+          @include max-media(750px) {
+            align-items: flex-start;
+            margin: 0;
+            > div {
+              padding: 5px;
+              text-align: center;
+            }
+          }
+        }
+        &__name {
+          > textarea {
+            padding: 20px 10px;
+            border: 1px solid #eaebf0;
+            border-radius: 8px;
+            display: inline-block;
+            color: $main-color;
+            font: inherit;
+            resize: none;
+            text-align: left;
+            @include max-media(750px) {
+              width: 100%;
+            }
+          }
+          @include max-media(750px) {
+            margin-bottom: 5px;
+          }
+        }
+        .btn-del {
+          position: absolute;
+          top: 50%;
+          right: 15px;
+          transform: translate(0, -50%);
+          &:hover {
+            svg {
+              path {
+                fill: red;
+              }
+            }
+          }
+          @include max-media(750px) {
+            top: 10px;
+            right: 15px;
+            transform: unset;
+          }
+        }
+        &__extend {
+          margin-top: 5px;
+          .label {
+            display: block;
+          }
+          .item-product__weight {
+            display: inline-block;
+            width: 287px;
+            max-width: 100%;
+            @include max-media(750px) {
+              display: block;
+              width: 100%;
+            }
+          }
+          .item-product__size {
+            display: inline-block;
+            width: calc(100% - 291px);
+            padding-left: 20px;
+            ul > li {
+              display: inline-block;
+              margin-right: 20px;
+              span,
+              input {
+                display: inline-block;
+                vertical-align: middle;
+              }
+              input {
+                width: 78px;
+                @include max-media(820px) {
+                  width: 60px;
+                }
+              }
+              span {
+                margin-right: 5px;
+              }
+            }
+            @include max-media(750px) {
+              display: block;
+              width: 100%;
+              margin-top: 5px;
+              padding-left: 0;
+              ul > li {
+                margin-right: 10px;
+                input {
+                  width: 50px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .addproduct {
+      padding: 15px;
+      cursor: pointer;
+      margin-top: -10px;
+      &:hover {
+        p {
+          color: $orange-hover;
+        }
+      }
+    }
+  }
+  &__footer {
+    background-color: #fff;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0px 159px 382px rgba(0, 0, 0, 0.15),
+      0px 66.4264px 159.59px rgba(0, 0, 0, 0.0287542),
+      0px 35.5147px 85.3247px rgba(0, 0, 0, 0.0238443),
+      0px 19.9093px 47.8323px rgba(0, 0, 0, 0.02),
+      0px 10.5737px 25.4034px rgba(0, 0, 0, 0.0161557),
+      0px 4.39994px 10.5709px rgba(0, 0, 0, 0.0112458);
+    padding: 15px;
+    .list-options {
+      .option {
+        display: inline-block;
+        margin-right: 23px;
+      }
+    }
+  }
+  .btn-del {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+    &:hover {
+      svg {
+        path {
+          fill: $red;
+        }
+      }
+    }
+    @include max-media(768px) {
+      top: 10px;
+      right: 10px;
+    }
+  }
+}

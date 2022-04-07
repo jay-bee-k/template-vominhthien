@@ -1,0 +1,207 @@
+.sidebar-bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: $main-color;
+  padding: 15px 0;
+  .wrap-sidebar-bottom {
+    width: 1210px;
+    max-width: 100%;
+    margin: auto;
+    padding: 0 15px;
+
+    display: flex;
+    align-items: center;
+    @include max-media(1200px) {
+      flex-wrap: wrap;
+    }
+  }
+  &__left {
+    flex-shrink: 0;
+  }
+  &__right {
+    padding-left: 30px;
+    width: 100%;
+    display: flex;
+    // flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    .checkbox-style-2 {
+      display: inline-flex;
+      flex-shrink: 0;
+      color: #fff;
+      .checkmark {
+        border-color: #fff;
+      }
+    }
+    .checkbox-style-2 input:checked ~ .checkmark {
+      background-color: $orange;
+      border-color: $orange;
+    }
+    .shopping-cart {
+      display: inline-flex;
+      align-items: center;
+      flex-shrink: 0;
+      margin-right: 20px;
+      flex-wrap: wrap;
+      &__add {
+        margin-right: 10px;
+      }
+      &__read {
+        a {
+          &:hover {
+            color: $orange;
+          }
+        }
+      }
+      @include max-media(1200px) {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+    }
+    .form-group {
+      margin-right: 10px;
+      display: inline-flex;
+      width: 100%;
+      .row {
+        width: 100%;
+      }
+      .col-6 {
+        display: inline-flex;
+        align-items: center;
+        .form-input {
+          width: 100%;
+        }
+      }
+      @include max-media(1200px) {
+        margin-right: 0;
+      }
+    }
+    .create-link {
+      margin-right: 100px;
+      flex-shrink: 0;
+      @include max-media(1200px) {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+    }
+    .form-group-discount {
+      margin-right: 10px;
+      display: inline-flex;
+      width: 100%;
+      .form-input {
+        display: flex;
+        align-items: center;
+        p {
+          flex-shrink: 0;
+          color: #fff;
+          margin-right: 20px;
+        }
+        input {
+          width: 90px;
+        }
+      }
+    }
+
+    .choose-email {
+      display: inline-flex;
+      align-items: center;
+      flex-shrink: 0;
+      margin-right: 20px;
+      flex-wrap: wrap;
+      &__text {
+        margin-right: 10px;
+        display: flex;
+        p {
+          &:first-child {
+            margin-right: 10px;
+          }
+        }
+      }
+      @include max-media(1200px) {
+        width: 100%;
+        &__text {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .text-inside {
+      width: 100%;
+      margin-right: 10px;
+      .text-and-icon {
+        display: flex;
+        img {
+          flex-shrink: 0;
+        }
+      }
+      @include max-media(1200px) {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+
+    .code-scan {
+      display: inline-flex;
+      align-items: center;
+      p {
+        margin-right: 20px;
+      }
+      button {
+        flex-shrink: 0;
+      }
+    }
+
+    @include max-media(1200px) {
+      justify-content: flex-start;
+      padding-left: 0;
+      margin-top: 10px;
+    }
+    @include max-media(1024px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  .exchange-rate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .btn-up-sidebar {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    background-color: $main-color;
+    color: #fff;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    transform: translateY(-100%);
+    .fa {
+      font-size: 20px;
+    }
+
+    display: none;
+    &.active {
+      .fa {
+        transform: rotate(180deg);
+      }
+    }
+    @include max-media(1210px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @include max-media(1200px) {
+    transform: translateY(100%);
+    transition: 0.2s ease-in-out;
+    &.active {
+      transform: translateY(0%);
+    }
+  }
+}

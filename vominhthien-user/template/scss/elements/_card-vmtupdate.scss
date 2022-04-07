@@ -1,0 +1,22 @@
+.card-vmtupdate {
+  background: linear-gradient(65.94deg, #ffffff -2.47%, #e9e9e9 112.37%);
+  .update-time {
+    padding: 8px 0;
+    border-top: 1px solid #c4c4c4;
+    margin: 8px 0;
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: $main-color;
+      display: inline-block;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+  }
+}

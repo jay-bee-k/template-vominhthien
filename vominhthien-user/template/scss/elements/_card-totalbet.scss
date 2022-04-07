@@ -1,0 +1,38 @@
+.card-totalbet {
+  background: linear-gradient(269.94deg, #8dc63f -24.37%, #009444 139.29%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__info {
+    color: #fff;
+  }
+
+  @include max-media(500px) {
+    flex-wrap: wrap;
+    &__info {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    &__button {
+      width: 100%;
+      button {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.btn-green-5 {
+  background-color: $main-color;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 15px 35px;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $main-color-bold;
+  }
+}

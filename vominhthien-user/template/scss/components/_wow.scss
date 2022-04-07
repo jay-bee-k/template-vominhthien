@@ -1,0 +1,7 @@
+.wow {
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  @include max-media(1200px) {
+    animation: unset !important;
+  }
+}

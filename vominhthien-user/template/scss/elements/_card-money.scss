@@ -1,0 +1,55 @@
+.card-money {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding-top: 11.5px;
+  padding-bottom: 11.5px;
+  &__surplus {
+    position: relative;
+    .text {
+      margin-bottom: 10px;
+      img,
+      span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      span {
+        margin: 0 5px;
+        color: $gray-80;
+      }
+    }
+    .number-money {
+      span {
+        display: inline-block;
+        vertical-align: text-top;
+      }
+    }
+  }
+
+  &__recharge {
+    text-align: right;
+    position: relative;
+    .history-transfer {
+      display: block;
+      margin-top: 12px;
+      img,
+      span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      span {
+        margin-left: 5px;
+      }
+      &:hover {
+        border-bottom: 1px solid $main-color;
+      }
+    }
+  }
+
+  .img-decor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,52 @@
+.plugin {
+  height: calc(100vh - 70px);
+  @include scroll(#666);
+  padding-bottom: 100px;
+  background-color: #fff;
+
+  .wrap-plugin {
+    display: flex;
+    .left {
+      width: 488px;
+      display: inline-block;
+      padding: 0 15px;
+    }
+    .right {
+      width: calc(100% - 488px);
+      padding: 0 15px;
+    }
+  }
+}
+.plugin-tablegreen {
+  background-color: #f0f8ef;
+  border: 1px solid #076007;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 10px 20px;
+
+  &__price {
+    padding-bottom: 10px;
+    border-bottom: 1px solid $main-color-bold;
+  }
+  &__info {
+    ul {
+      list-style: inside;
+    }
+  }
+  .exchange {
+    p,
+    a {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .info-wraning {
+    background: linear-gradient(269.94deg, #8dc63f -24.37%, #009444 139.29%);
+    border-radius: 10px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: #fff;
+    display: inline-block;
+    font-size: 11px;
+  }
+}

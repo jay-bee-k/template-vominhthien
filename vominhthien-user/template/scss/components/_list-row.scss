@@ -1,0 +1,25 @@
+.list-row {
+    position: relative;
+    padding-left: calc(var(--width) + 15px)!important;
+    &::before {
+        content: '';
+        width: var(--width);
+        height: var(--height);
+        background-image: var(--background);
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: inline-block;
+        vertical-align: middle;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+}
+
+.list-row---top {
+    &::before {
+        top: 0;
+        transform: translateY(0%);
+    }
+}

@@ -1,0 +1,28 @@
+.card-transactions {
+  background-image: url("../images/bg-transations.jpg");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+
+  border-radius: 10px;
+  padding: 15px 20px;
+  > p {
+    width: 50%;
+    @include max-media(500px) {
+      width: 100%;
+    }
+  }
+  .btn-learnmore {
+    border-radius: 100px;
+    background-color: #fff;
+    text-align: center;
+    padding: 8px 15px;
+    color: $main-color;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: $orange-hover;
+      color: #fff;
+    }
+  }
+}

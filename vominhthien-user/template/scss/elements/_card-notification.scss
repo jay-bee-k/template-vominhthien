@@ -1,0 +1,269 @@
+.card-notification {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .count {
+      font-size: 14px;
+      color: #fff;
+      width: 20px;
+      height: 20px;
+      background-color: $red;
+      border-radius: 50%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .check-readall {
+      color: $gray-sub;
+      svg {
+        path {
+          stroke: $gray-sub;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+      &:hover {
+        svg {
+          path {
+            stroke: $orange;
+          }
+        }
+      }
+      &.have-new {
+        color: #000;
+        svg {
+          path {
+            stroke: #076007;
+            transition: all 0.2s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+  &__body {
+    .tabbar {
+      margin: 0 0 5px;
+      display: flex;
+      li {
+        // display: inline-block;
+        color: $gray-sub;
+        padding: 5px 0px;
+        position: relative;
+        span {
+          display: inline-block;
+          vertical-align: middle;
+        }
+        &.have-new {
+          &::after {
+            content: "";
+            width: 5px;
+            height: 5px;
+            background-color: $red;
+            border-radius: 50%;
+            margin-left: 2px;
+            display: inline-block;
+            vertical-align: middle;
+          }
+        }
+        &.tab-link {
+          cursor: pointer;
+          position: relative;
+          width: 70px;
+          span {
+            font-size: 12px;
+          }
+          .line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(-50%);
+            pointer-events: none;
+          }
+        }
+        &.active {
+          color: $main-color;
+          font-weight: 700;
+          .line {
+            svg {
+              path {
+                stroke: $main-color;
+              }
+            }
+          }
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+    .tabcontent {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+    .list-notification {
+      max-height: 400px;
+      padding-right: 6px;
+      @include scroll($gray-active);
+      .item-notification {
+        padding: 10px 0;
+        border-bottom: 1px solid #d5d6de;
+        &__label {
+          margin-bottom: 8px;
+          svg {
+            width: 16px;
+            height: 16px;
+            path {
+              stroke: $gray-sub;
+            }
+          }
+          .text-and-icon {
+            &:hover {
+              color: $orange-hover;
+              > span {
+                color: $orange-hover !important;
+              }
+              svg {
+                path {
+                  stroke: $orange-hover !important;
+                }
+              }
+            }
+          }
+          .text-and-icon > span {
+            display: inline-block;
+            vertical-align: middle;
+            color: $gray-sub;
+          }
+          > span {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 15px;
+            position: relative;
+            color: $gray-sub;
+            &::before {
+              content: "";
+              height: 12px;
+              width: 1px;
+              background-color: $gray-sub;
+              display: inline-block;
+              position: absolute;
+              top: 15%;
+              left: -8px;
+            }
+          }
+        }
+        &__content {
+          padding-left: 21px;
+          color: $gray-sub;
+          @include line-clamp(2);
+        }
+        &__action {
+          padding-left: 21px;
+          color: $gray-sub;
+          a {
+            &:hover {
+              color: $main-color;
+              text-decoration: underline;
+            }
+          }
+        }
+
+        &.new {
+          .item-notification__label {
+            .text-and-icon > span {
+              color: $main-color;
+            }
+            svg {
+              path {
+                stroke: #1a8917;
+              }
+            }
+          }
+          .item-notification__content {
+            color: #000;
+            font-weight: 700;
+          }
+          .item-notification__action {
+            color: $main-color;
+          }
+          &.taichinh {
+            .item-notification__label {
+              .text-and-icon > span {
+                color: $orange-hover;
+              }
+              svg {
+                path {
+                  stroke: $orange-hover;
+                }
+              }
+            }
+          }
+          &.news {
+            .item-notification__label {
+              .text-and-icon > span {
+                color: #005dd0;
+              }
+              svg {
+                path {
+                  stroke: #005dd0;
+                }
+              }
+            }
+          }
+        }
+
+        &:last-child {
+          border-bottom: unset;
+        }
+      }
+    }
+    .read-all {
+      a {
+        padding: 15px 15px 0;
+        display: block;
+        text-align: center;
+        color: #076007;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &.big-size {
+    .card-notification__header {
+      padding-bottom: 10px;
+      border-bottom: 1px solid $gray-active;
+    }
+    .item-notification__label {
+      .text-and-icon {
+        svg {
+          width: 28px;
+          height: 28px;
+        }
+      }
+    }
+    .card-notification__body .tabbar li.tab-link {
+      width: 75.5px;
+    }
+    .card-notification__body .list-notification .item-notification__content {
+      padding-left: 36px;
+    }
+    .card-notification__body .list-notification .item-notification__action {
+      padding-left: 36px;
+    }
+    .card-notification__body {
+      .list-notification {
+        max-height: 100%;
+        padding-right: 6px;
+        @include scroll($gray-active);
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+// html {
+//   height: 100%;
+// }
+body {
+  font-family: $font, sans-serif, Fontawesome;
+  font-size: 14px;
+  background-color: rgba($color: #bebebe, $alpha: 0.5);
+  line-height: 1.5;
+  height: 100vh;
+  overflow: hidden;
+}
+
+a {
+  &:hover {
+    @include min-media(1200px) {
+      color: $main-color;
+    }
+  }
+}
+
+::selection {
+  background-color: $main-color;
+  color: #fff;
+}
+
+button {
+  font: inherit;
+}
+
+// #main {
+//   // @include min-media(768px) {
+//   //   margin-top: 70px;
+//   // }
+// }
+
+// Footer's always bottom of page
+// #__tufe {
+//   height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+// }
+// .wrapper-page {
+//   flex: 1 0 auto;
+//   overflow: hidden;
+//   &::-webkit-scrollbar {
+//     width: 0px;
+//   }
+// }
+// footer {
+//   // flex: 1 1 0;
+//   flex-shrink: 0;
+// }

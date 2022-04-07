@@ -1,0 +1,27 @@
+.card-waitforpay {
+  .item-pay {
+    padding: 8px;
+    border-bottom: 1px solid #d5d6de;
+    &__label {
+      .text-sub-gray {
+        &::before {
+          content: "";
+          height: 10px;
+          width: 1px;
+          display: inline-block;
+          vertical-align: middle;
+          background-color: $gray-sub;
+          margin: 0 5px 2px 0;
+        }
+      }
+    }
+    &__content {
+      padding-left: 25px;
+    }
+  }
+  .btn-green-2 {
+    display: inline-block;
+    margin-top: 15px;
+    width: 168px;
+  }
+}

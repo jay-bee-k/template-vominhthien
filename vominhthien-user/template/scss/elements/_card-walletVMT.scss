@@ -1,0 +1,480 @@
+.card-walletVMT {
+  position: relative;
+  background: linear-gradient(266.04deg, #1a8917 38.49%, #076007 87.53%);
+  box-shadow: 0px 46px 92px rgba(71, 71, 71, 0.07),
+    0px 5.75991px 11.5198px rgba(71, 71, 71, 0.035);
+  border-radius: 20px;
+  padding: 15px;
+  color: #fff;
+  min-height: 142px;
+  .total-money {
+    span {
+      display: inline-block;
+      vertical-align: text-top;
+    }
+  }
+  .img-decor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__tab {
+    background-color: #fff;
+    box-shadow: 0px 46px 92px rgba(71, 71, 71, 0.07),
+      0px 5.75991px 11.5198px rgba(71, 71, 71, 0.035);
+    border-radius: 20px;
+    position: absolute;
+    bottom: -38%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 517px;
+    max-width: 100%;
+    @include max-media(500px) {
+      bottom: -20%;
+    }
+    @include max-media(400px) {
+      bottom: -15%;
+    }
+    .list-tab {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px;
+      .tab {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        cursor: pointer;
+        span,
+        svg {
+        }
+        span {
+          color: $gray-90;
+          font-weight: 700;
+          margin-top: 5px;
+        }
+        svg {
+          path {
+            fill: #919191;
+          }
+        }
+        &:hover,
+        &.active {
+          svg {
+            path {
+              fill: $main-color;
+            }
+          }
+        }
+      }
+      @include max-media(550px) {
+        padding: 15px;
+        gap: 5px;
+        .tab {
+          svg {
+            width: 30px;
+            height: 30px;
+          }
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+      @include max-media(400px) {
+        padding: 10px 5px;
+        gap: 3px;
+      }
+    }
+  }
+}
+
+.card-walletVMT-content {
+  margin-top: 70px;
+  @include max-media(550px) {
+    margin-top: 50px;
+  }
+  .tabcontent {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+
+  .card-notification__body
+    .list-notification
+    .naptien
+    .item-notification__label
+    svg
+    path {
+    stroke: $main-color;
+    fill: $main-color;
+  }
+  .card-notification__body
+    .list-notification
+    .naptien
+    .item-notification__label
+    .text-and-icon
+    > span {
+    color: $main-color;
+  }
+
+  .card-notification__body
+    .list-notification
+    .thanhtoan
+    .item-notification__label
+    svg
+    path {
+    stroke: $orange-active;
+    fill: $orange-active;
+  }
+  .card-notification__body
+    .list-notification
+    .thanhtoan
+    .item-notification__label
+    .text-and-icon
+    > span {
+    color: $orange-active;
+  }
+
+  .card-notification__body
+    .list-notification
+    .ruttien
+    .item-notification__label
+    svg
+    path {
+    stroke: $red;
+    fill: $red;
+  }
+  .card-notification__body
+    .list-notification
+    .ruttien
+    .item-notification__label
+    .text-and-icon
+    > span {
+    color: $red;
+  }
+
+  .card-notification__body .list-notification .item-notification__label {
+    margin-bottom: 0;
+  }
+
+  .card-notification__body .list-notification .item-notification__content {
+    padding-left: 34px;
+    @include un-line-clamp;
+  }
+}
+
+.card-ruttien {
+}
+
+.list-button-inline {
+  button {
+    display: inline-block;
+    width: unset;
+    padding: 8px;
+    width: 160px;
+    margin-right: 20px;
+  }
+}
+
+.list-method {
+  .item-method {
+    margin-bottom: 15px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    &__body {
+      line-height: 1.5;
+      p {
+        margin-top: 5px;
+      }
+      display: none;
+    }
+    &.active {
+      .item-method__body {
+        display: block;
+      }
+      .item-method__header {
+        .icon {
+          transform: rotate(90deg);
+        }
+      }
+    }
+    .icon {
+      display: flex;
+    }
+    .list-price {
+      margin-bottom: 10px;
+      .item-price {
+        display: inline-block;
+        padding: 10px 20px;
+        width: 30%;
+        text-align: center;
+        border-radius: 10px;
+        background-color: $gray;
+        margin-top: 10px;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        &:hover,
+        &:focus {
+          background-color: $main-color;
+          color: #fff;
+        }
+        &.active {
+          background-color: $main-color;
+          color: #fff;
+        }
+      }
+    }
+    .list-bank {
+      margin-bottom: 10px;
+      .item-bank {
+        display: inline-block;
+        width: 105px;
+        margin-top: 10px;
+        margin-right: 10px;
+        cursor: pointer;
+        img {
+          border-radius: 8px;
+          border: 1px solid transparent;
+          box-shadow: 5px 5px 15px rgba($color: #000000, $alpha: 0.15);
+        }
+        &.active {
+          img {
+            border-color: $main-color;
+          }
+        }
+      }
+    }
+    .btn-green-2,
+    .btn-gray-3 {
+      display: inline-block;
+      max-width: 170px;
+      margin-right: 10px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .btn-gray-3 {
+      background-color: #eaebf0;
+      color: #000;
+      &:hover {
+        background-color: $gray-hover;
+      }
+    }
+    .tab-content {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+    .main-info {
+      background-color: #f0f8ef;
+      border-radius: 10px;
+      padding: 20px;
+      @include max-media(500px) {
+        padding: 10px;
+      }
+      p {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+table {
+  font: inherit;
+}
+
+// .card-created {
+//   overflow: hidden;
+// }
+.table-normal {
+  overflow: auto;
+  table {
+    width: 577px;
+    max-width: unset;
+    thead {
+      color: $gray-80;
+      font-size: 16px;
+      th {
+        text-align: left;
+        padding: 10px 0;
+      }
+    }
+    tbody {
+      th {
+        text-align: left;
+        padding: 10px 10px 10px 0;
+        font-weight: normal;
+      }
+      tr {
+        vertical-align: top;
+        border-top: 1px solid $gray-hover;
+        &:last-child {
+          th {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.list-item-creditcard {
+  .item-creditcard {
+    background-color: #f0f8ef;
+    box-shadow: 0px 46px 92px rgba(71, 71, 71, 0.07),
+      0px 5.75991px 11.5198px rgba(71, 71, 71, 0.035);
+    border-radius: 20px;
+    padding: 15px;
+    height: 131px;
+    &__icon {
+      width: 24px;
+      display: inline-block;
+    }
+    &__info {
+      width: calc(99% - 28px);
+      display: inline-block;
+      line-height: 1.8;
+      padding-left: 15px;
+      vertical-align: top;
+      .btn-delcard {
+        color: $main-color;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    &.add-creditcard {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #fff;
+      border: 1px dashed $main-color;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+      &:hover {
+        background-color: $main-color;
+        color: #fff;
+        svg {
+          path {
+            fill: #fff;
+          }
+        }
+      }
+    }
+  }
+  margin: -10px !important;
+  .f-col {
+    padding: 10px !important;
+  }
+}
+
+.form-group-voucher {
+  .input-search,
+  button {
+    display: inline-block;
+  }
+  button {
+    width: 136px;
+    height: 44px;
+    @include max-media(500px) {
+      width: 100px;
+    }
+  }
+  .input-search {
+    width: calc(100% - 140px);
+    padding-right: 20px;
+    @include max-media(500px) {
+      padding-right: 10px;
+      width: calc(100% - 104px);
+    }
+  }
+}
+
+.style-input-gray {
+  background-color: $gray;
+  padding: 10px 20px;
+  border-radius: 15px;
+  width: 100%;
+  outline: none;
+  border-color: transparent;
+  font: inherit;
+  transition: all 0.2s ease-in-out;
+  &:hover,
+  &:focus {
+    border-color: $main-color;
+  }
+  &::placeholder {
+    color: $gray-sub;
+  }
+}
+
+.list-voucher {
+  .item-voucher {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-color: $gray;
+    &__icon,
+    &__info {
+      display: inline-block;
+      vertical-align: text-top;
+    }
+    &__icon {
+      svg {
+        path {
+          &:first-child {
+            fill: $gray-sub;
+          }
+        }
+      }
+    }
+    &__info {
+      color: $gray-sub;
+      padding-left: 15px;
+      @include max-media(600px) {
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+    .date {
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      border-bottom: 1px solid #e7e7e7;
+    }
+    &.due {
+      color: #000;
+      background-color: #f0f8ef;
+      .date {
+        color: $main-color;
+      }
+      .item-voucher__icon {
+        svg {
+          path {
+            &:first-child {
+              fill: #4caf50;
+            }
+          }
+        }
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

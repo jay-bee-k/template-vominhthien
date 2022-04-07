@@ -1,0 +1,37 @@
+.maincontent {
+  height: calc(100vh - 70px);
+  @include scroll(#666);
+  &-center {
+    width: 830px;
+    max-width: 100%;
+    padding: 0 10px;
+    display: inline-block;
+    @include max-media($width-responsive-sidebar) {
+      width: 70%;
+    }
+    @include max-media(768px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  &-sidebar {
+    width: calc(100% - 830px);
+    max-width: 100%;
+    padding: 0 10px;
+    display: inline-block;
+    @include max-media($width-responsive-sidebar) {
+      width: 30%;
+    }
+    @include max-media(768px) {
+      width: 100%;
+    }
+  }
+}
+
+.wrap-maincontent {
+  display: flex;
+  margin: 50px -10px;
+  @include max-media(768px) {
+    flex-direction: column;
+  }
+}

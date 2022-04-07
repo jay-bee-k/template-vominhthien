@@ -1,0 +1,217 @@
+.card-requirement {
+  background-color: #ffffffcc;
+  &__footer {
+    margin-top: 15px;
+    .left {
+      display: inline-block;
+      vertical-align: text-top;
+      width: calc(99% - 233px);
+      ul {
+        margin: -15px;
+        display: flex;
+        @include max-media(500px) {
+          margin: -8px;
+        }
+      }
+      ul > li {
+        display: inline-block;
+        padding: 15px;
+        position: relative;
+        &::after {
+          content: "";
+          width: 1px;
+          height: 60%;
+          background-color: #909090;
+          display: inline-block;
+
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+        }
+        &:last-child {
+          &::after {
+            content: unset;
+          }
+        }
+        @include max-media(500px) {
+          padding: 8px;
+        }
+        .label {
+          @include max-media(550px) {
+            font-size: 14px;
+          }
+        }
+        .fz-24 {
+          @include max-media(550px) {
+            font-size: 16px;
+          }
+          @include max-media(400px) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .right {
+      display: inline-block;
+      vertical-align: text-top;
+      .btn-next-step {
+        display: inline-block;
+      }
+    }
+    @include max-media(768px) {
+      .left {
+        width: 100%;
+      }
+      .right {
+        width: 100%;
+        margin-top: 15px;
+        .btn-next-step {
+          display: block;
+        }
+      }
+    }
+  }
+}
+.item-requirement {
+  position: relative;
+  &__header {
+    border-bottom: 1px solid #eaebf0;
+    padding: 0 40px 15px;
+    .form-input {
+      display: inline-block;
+      margin-right: 20px;
+      width: 260px;
+      max-width: 100%;
+      &:last-child {
+        margin-right: 0;
+      }
+      input {
+        padding: 10px 25px !important;
+      }
+      select {
+        color: $gray-sub;
+      }
+      .input-have-icon {
+        position: relative;
+        .icon {
+          position: absolute;
+          top: 50%;
+          left: 25px;
+          transform: translate(0, -50%);
+          display: flex;
+        }
+        input {
+          padding-left: 60px !important;
+        }
+      }
+    }
+    @include max-media(768px) {
+      padding: 0 0px 15px;
+    }
+    @include max-media(750px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -5px;
+      .form-input {
+        width: 50%;
+        margin: 0;
+        padding: 5px;
+      }
+    }
+    @include max-media(500px) {
+      .form-input {
+        width: 100%;
+      }
+    }
+  }
+  &__body {
+    padding: 0 40px;
+    @include max-media(768px) {
+      padding: 0;
+    }
+    .form-input {
+      display: inline-block;
+      &:first-child {
+        width: 260px;
+      }
+      &:nth-child(2) {
+        width: calc(99% - 260px);
+        padding-left: 20px;
+      }
+      &:last-child {
+        width: 100%;
+      }
+      input {
+        padding: 10px 25px !important;
+      }
+    }
+    &.custom {
+      display: flex;
+      flex-wrap: wrap;
+      .form-input {
+        width: 33.33%;
+        padding-left: 20px;
+        &:first-child,
+        &:nth-child(4),
+        &:nth-child(5) {
+          padding-left: 0;
+        }
+      }
+    }
+    @include max-media(750px) {
+      display: flex;
+      flex-wrap: wrap;
+      .form-input {
+        width: 50% !important;
+        margin: 0;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding: 5px;
+        &:first-child {
+          padding-right: 5px !important;
+        }
+        &:nth-child(2) {
+          padding-left: 5px !important;
+        }
+        &:last-child {
+          width: 100% !important;
+        }
+      }
+    }
+    @include max-media(500px) {
+      .form-input {
+        width: 100% !important;
+      }
+    }
+  }
+
+  .icon-decor {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    @include max-media(768px) {
+      display: none;
+    }
+  }
+  .btn-del {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+    &:hover {
+      svg {
+        path {
+          fill: $red;
+        }
+      }
+    }
+    @include max-media(768px) {
+      top: 10px;
+      right: 10px;
+    }
+  }
+}
+.list-requirement {
+  border-bottom: 1px solid #ffffff;
+}

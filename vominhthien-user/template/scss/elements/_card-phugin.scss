@@ -1,0 +1,20 @@
+.card-plugin {
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0px 46px 92px rgba(71, 71, 71, 0.07),
+    0px 5.75991px 11.5198px rgba(71, 71, 71, 0.035);
+  border-radius: 20px;
+  &__header {
+    padding-bottom: 5px;
+    border-bottom: 1px solid $gray-hover;
+  }
+  &__body {
+    p {
+      &:last-child {
+        @include line-clamp(4);
+      }
+    }
+  }
+  &__footer {
+  }
+}

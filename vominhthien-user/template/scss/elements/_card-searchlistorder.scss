@@ -1,0 +1,26 @@
+.card-searchlistorder {
+  .input-have-icon {
+    position: relative;
+    .icon {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+    &.right {
+      .icon {
+        right: 15px;
+      }
+      .style-input-gray {
+        padding-right: 54px;
+      }
+    }
+    &.left {
+      .icon {
+        left: 15px;
+      }
+      .style-input-gray {
+        padding-left: 54px;
+      }
+    }
+  }
+}

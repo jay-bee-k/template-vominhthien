@@ -1,0 +1,152 @@
+.header {
+  box-shadow: 0px 5px 10px rgba($color: #000000, $alpha: 0.1);
+  background-color: #fff;
+  &-logo,
+  &-message,
+  &-action {
+    @include min-media($width-responsive-sidebar) {
+      flex: 1;
+    }
+  }
+  // @include min-media(768px) {
+  //   position: fixed;
+  //   top: 0;
+  //   z-index: 99;
+  //   width: 100%;
+  // }
+}
+
+.wrap-header {
+  padding: 15px 0;
+  min-height: 70px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  @include max-media(500px) {
+    padding-top: 50px;
+  }
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  .logo {
+    @include max-media(600px) {
+      display: none;
+    }
+  }
+  .logo-moblie {
+    display: none;
+    @include max-media(600px) {
+      display: block;
+    }
+  }
+}
+
+.header-message {
+  p {
+    img,
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  @include max-media($width-responsive-sidebar) {
+    display: none;
+  }
+}
+
+.header-action {
+  text-align: right;
+  > div {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+  }
+  .button-storage {
+    min-height: 30px;
+    min-width: 110px;
+    // @include max-media(400px) {
+    //   .btn-main-color {
+    //     padding: 5px 8px;
+    //   }
+    //   min-width: unset;
+    // }
+  }
+  .price-exchange {
+    @include max-media(500px) {
+      position: absolute;
+      top: 15px;
+      left: 0;
+      margin-left: 0;
+    }
+  }
+  .notification {
+    @include max-media(500px) {
+      position: absolute;
+      top: 13px;
+      right: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+.notification {
+  &-block {
+    display: inline-block;
+    &:last-child {
+      margin-left: 15px;
+    }
+    .icon {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
+      position: relative;
+      svg {
+        path {
+          fill: #444444;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+    }
+    .count {
+      display: inline-block;
+      vertical-align: middle;
+      color: $main-color;
+    }
+    &.have-new {
+      .icon {
+        &::after {
+          content: "";
+          width: 10px;
+          height: 10px;
+          background-color: $red;
+          border-radius: 50%;
+
+          position: absolute;
+          top: 0;
+          right: 0;
+          transform: translate(-5%, 0%);
+        }
+      }
+    }
+    &:hover {
+      svg {
+        path {
+          fill: $main-color;
+        }
+      }
+    }
+  }
+}
+
+.header-menu-btn {
+  display: none;
+  margin-right: 10px;
+  @include max-media($width-responsive-sidebar) {
+    display: flex;
+  }
+}

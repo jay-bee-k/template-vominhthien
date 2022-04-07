@@ -1,0 +1,62 @@
+.card-finance {
+  &__body {
+    ul > li {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 7px 0;
+      p {
+        &:last-child {
+          text-align: right;
+        }
+        a {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .row {
+      margin: 0 -15px;
+      .col-6 {
+        padding: 0 15px;
+      }
+    }
+    .total {
+      border-top: 1px solid #d5d6de;
+      border-bottom: 1px solid #d5d6de;
+      padding: 5px 0;
+      text-align: right;
+      ul {
+        width: 40%;
+        margin-left: auto;
+        @include max-media(768px) {
+          width: 100%;
+        }
+      }
+      ul > li {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+  &__footer {
+    .list-option {
+      text-align: right;
+      a,
+      button {
+        display: inline-block;
+        margin: 0 10px;
+        vertical-align: middle;
+      }
+      button {
+        margin-right: 0;
+      }
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
