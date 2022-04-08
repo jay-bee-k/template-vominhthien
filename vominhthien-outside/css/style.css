@@ -4292,8 +4292,12 @@ ul.footer-menu li:hover a {
         right: 0;
     }
 
+    .sticky-tool-tab .tab-button-vertical {
+        z-index: 2;
+    }
+
     .sticky-tool-tab .tab-button-vertical.showOff {
-        transform: translate(0, 150%);
+        transform: translate(0);
     }
 
     .sticky-tool-tab .tab-button-vertical .nav {
@@ -4348,10 +4352,11 @@ ul.footer-menu li:hover a {
 
     .sticky-tool-tab .group-tabs {
         transform: translate(0, 150%);
+        z-index: 1;
     }
 
     .sticky-tool-tab .group-tabs.showOn {
-        transform: translate(0);
+        transform: translateY(-64px);
     }
 
     .sticky-tool-tab .tab-button-horizontal {
@@ -4360,16 +4365,31 @@ ul.footer-menu li:hover a {
 
     .sticky-tool-tab .tab-content {
         width: 100%;
-        border-radius: 0 60px 0 0;
+        border-radius: 0 80px 0 0;
     }
 
     .sticky-tool-tab .tab-content .tab-panel {
         max-height: 0;
+        padding: 18px 20px;
+        bottom: 0;
+    }
+
+    .sticky-tool-tab .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sticky-tool-tab .btn i {
+        font-size: 20px;
+    }
+
+    .sticky-tool-tab p {
+        margin-bottom: 5px;
     }
 
     .sticky-tool-tab .group-tabs.showOn .tab-panel.showcontent {
-        max-height: 100vh;
-        bottom: 0;
+        max-height: calc(100vh - 64px - 120px - 50px);
     }
 
     #btn-backtotop {
