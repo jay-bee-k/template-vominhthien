@@ -4389,7 +4389,7 @@ ul.footer-menu li:hover a {
     }
 
     .sticky-tool-tab .group-tabs.showOn .tab-panel.showcontent {
-        max-height: calc(100vh - 64px - 120px - 50px);
+        max-height: calc(100vh - 64px - 120px - 120px);
     }
 
     #btn-backtotop {
