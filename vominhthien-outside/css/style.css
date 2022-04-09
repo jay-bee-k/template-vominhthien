@@ -1706,6 +1706,16 @@ header {
     left: -24px;
 }
 
+@media screen and (max-width: 991px) {
+    .col-service .swiper-button-next {
+        right: 0;
+    }
+
+    .col-service .swiper-button-prev {
+        left: 0;
+    }
+}
+
 /*---style sec-dathang---*/
 .sec-dathang .col-content {
     margin-top: 70px;
@@ -4395,5 +4405,23 @@ ul.footer-menu li:hover a {
     #btn-backtotop {
         bottom: 70px;
         right: 15px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .parameter-wrap {
+        padding-left: 30px;
+    }
+
+    .sec-dathangnhanh,
+    .sec-appnhaphang,
+    .appnhaphang-content,
+    .sec-dangkygui,
+    .sec-camket-guihang,
+    .sec-camket,
+    .sec-minhbach,
+    .sec-loiich,
+    .sec-xaydung {
+        overflow-x: hidden;
     }
 }
