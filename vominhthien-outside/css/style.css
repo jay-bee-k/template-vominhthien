@@ -3496,7 +3496,8 @@ header {
     color: #ff993e;
 }
 
-.sec-footer h3 {
+.sec-footer h3,
+.sec-footer .title-footer {
     font-family: 'Lato', sans-serif;
     font-weight: 900;
     font-size: 14px;
@@ -4424,4 +4425,39 @@ ul.footer-menu li:hover a {
     .sec-xaydung {
         overflow-x: hidden;
     }
+}
+
+.mb-05 {
+    margin-bottom: .5rem;
+}
+
+.theme-pagination {
+    margin-top: 20px;
+}
+
+.theme-pagination .pagination {
+    margin-bottom: 0;
+    justify-content: center;
+}
+
+.theme-pagination .pagination .page-item .page-link {
+    border-radius: 4px;
+    height: 38px;
+    min-width: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.theme-pagination .pagination .page-item.active .page-link,
+.theme-pagination .pagination .page-item .page-link:hover {
+    color: var(--bs-white);
+    background-color: #1a8917;
+    border-color: #1a8917;
+}
+
+.theme-pagination .pagination .page-item + .page-item {
+    margin-left: 10px;
 }
