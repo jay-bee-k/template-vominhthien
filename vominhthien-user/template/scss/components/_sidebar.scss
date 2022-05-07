@@ -116,6 +116,14 @@ $padding-lr-mb: 15px;
           height: 20px;
         }
       }
+      @include max-media(1440px) {
+        min-height: unset;
+        font-size: 10px;
+        .img {
+          width: 18px;
+          height: 18px;
+        }
+      }
       // &.dropdown {
       // }
       .wrap-sub-menu {
@@ -205,6 +213,10 @@ $padding-lr-mb: 15px;
           }
         }
       }
+      @include max-media(1366px) {
+        padding-top: 5px;
+        margin-top: 5px;
+      }
     }
     .timework {
       color: $gray-sub;
@@ -214,6 +226,18 @@ $padding-lr-mb: 15px;
         margin-top: 10px;
         padding-bottom: 10px;
         font-size: 12px;
+      }
+      @include max-media(1366px) {
+        margin-top: 5px;
+        padding-bottom: 5px;
+        font-size: 10px;
+        > p {
+          &:first-child {
+            br {
+              display: none;
+            }
+          }
+        }
       }
     }
   }
@@ -225,6 +249,9 @@ $padding-lr-mb: 15px;
   display: flex;
   flex-direction: column;
   height: 100%;
+  @include max-media(1560px) {
+    width: 250px;
+  }
   @include max-media($width-responsive-sidebar) {
     background-color: $gray-90;
   }

@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon/fav.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <title>Phugin Thanh toán 3</title>
+  </head>
+  <body id="body">
+    <div id="__tufe">
+      <!-- Header and Main -->
+      <div class="wrapper-page">
+        <header class="header" id="header">
+          <div class="container">
+            <div class="wrap-header">
+              <div class="header-logo">
+                <div class="hamburger-btn header-menu-btn" id="header-menu-btn">
+                  <div class="bar"></div>
+                </div>
+                <a href="#" class="logo"
+                  ><img src="images/logo.png" alt="log"
+                /></a>
+                <a href="#" class="logo-moblie"
+                  ><img src="images/favicon/fav.png" alt="log"
+                /></a>
+              </div>
+              <div class="header-message">
+                <marquee>
+                  <img src="images/Subtract.png" alt="icon" />
+                  <span class="fw-700 text-color-main">Tin vắn: </span>
+                  <span class="text-orange-active"
+                    >Thông báo triển khai giao hàng kho Sài Gòn trong giai đoạn
+                    thực hiện giãn cách xã hội
+                  </span>
+                </marquee>
+              </div>
+              <div class="header-action">
+                <div class="price-exchange">1 ¥ = 3.750 vnđ</div>
+                <div class="notification">
+                  <button class="notification-block shopping-cart have-new">
+                    <div class="icon">
+                      <svg
+                        width="24"
+                        height="25"
+                        viewBox="0 0 24 25"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M7 8.03516H21.5L18.5 17.5352H9.5L7 8.03516Z" />
+                        <path
+                          d="M1.16806 2.98056C1.47441 2.52103 2.09528 2.39686 2.55481 2.70321L7.05481 5.70321C7.26797 5.84532 7.41846 6.06382 7.47524 6.31364L9.79834 16.5353H18.2519L18.8401 14.5352H12.0001C11.4478 14.5352 11.0001 14.0875 11.0001 13.5352C11.0001 12.983 11.4478 12.5352 12.0001 12.5352H19.4283L20.1636 10.0353H12.0001C11.4478 10.0353 11.0001 9.58755 11.0001 9.03526C11.0001 8.48298 11.4478 8.03526 12.0001 8.03526H21.5001C21.8153 8.03526 22.112 8.18383 22.3008 8.43617C22.4896 8.6885 22.5484 9.01508 22.4595 9.31743L19.9595 17.8174C19.8343 18.243 19.4437 18.5353 19.0001 18.5353H9.00011C8.53321 18.5353 8.12845 18.2122 8.02497 17.7569L5.6134 7.14598L1.44541 4.36731C0.985877 4.06096 0.861704 3.44009 1.16806 2.98056Z"
+                        />
+                        <path
+                          d="M11.5001 21.2852C11.5001 22.2517 10.7166 23.0352 9.75011 23.0352C8.78361 23.0352 8.00011 22.2517 8.00011 21.2852C8.00011 20.3188 8.78361 19.5352 9.75011 19.5352C10.7166 19.5352 11.5001 20.3188 11.5001 21.2852Z"
+                        />
+                        <path
+                          d="M20.0001 21.2852C20.0001 22.2517 19.2166 23.0352 18.2501 23.0352C17.2836 23.0352 16.5001 22.2517 16.5001 21.2852C16.5001 20.3188 17.2836 19.5352 18.2501 19.5352C19.2166 19.5352 20.0001 20.3188 20.0001 21.2852Z"
+                        />
+                      </svg>
+                    </div>
+                    <span class="count">15</span>
+                  </button>
+                  <button class="notification-block bring have-new">
+                    <div class="icon">
+                      <svg
+                        width="24"
+                        height="25"
+                        viewBox="0 0 24 25"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 23.0357C13.6569 23.0357 15 21.6926 15 20.0357C15 20.0076 14.9996 19.9796 14.9988 19.9517C14.9922 19.7097 14.7823 19.5337 14.5403 19.531L9.47169 19.4735C9.22965 19.4707 9.01585 19.6419 9.00379 19.8837C9.00127 19.934 9 19.9847 9 20.0357C9 21.6926 10.3431 23.0357 12 23.0357Z"
+                        />
+                        <path
+                          d="M5 9.53516C5 5.66916 8.13401 2.03516 12 2.03516C15.866 2.03516 19 5.66916 19 9.53516V11.9958C19 13.293 19.5547 14.5282 20.5242 15.39C21.5645 16.3148 20.9104 18.0352 19.5185 18.0352H4.48147C3.08955 18.0352 2.43545 16.3148 3.47579 15.39C4.4453 14.5282 5 13.293 5 11.9958V9.53516Z"
+                        />
+                      </svg>
+                    </div>
+                    <span class="count">15</span>
+                  </button>
+                </div>
+                <div class="button-storage">
+                  <a href="#" class="btn-main-color">
+                    <img src="images/arrow.png" alt="" />
+                    <span>StorageX</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main id="main">
+          <!-- Children -->
+          <div class="wrap-main d-block">
+            <div class="plugin">
+              <p class="text-center">
+                <img src="images/image 79.png" alt="" />
+              </p>
+            </div>
+
+            <div class="sidebar-right">
+              <div
+                class="
+                  sidebar-right__title
+                  text-color-main text-center
+                  mb-20
+                  fz-20
+                  fw-700
+                "
+              >
+                <p class="text-and-icon">
+                  <img src="images/icon/Check2.svg" alt="" />
+                  <span>Tạo đơn thanh toán hộ thành công</span>
+                </p>
+              </div>
+              <div class="sidebar-right__body hide">
+                <ul class="tabbar">
+                  <li class="tab tab-link active" data-tab="#cothekhaibao">
+                    Có thể khai báo
+                  </li>
+                  <li class="tab tab-link" data-tab="#chomavandon">
+                    Chờ mã vận đơn
+                  </li>
+                </ul>
+                <div class="tabcontent">
+                  <div
+                    class="tab-content tab-content-require active"
+                    id="cothekhaibao"
+                  >
+                    <div class="tab-content-require__header">
+                      <div class="check-filter text-right mb-15">
+                        <label class="checkbox-style-2">
+                          <p class="text-and-icon" style="margin-top: -4px">
+                            <!-- <img src="images/icon/1688.png" alt=""> -->
+                            <span class="fz-14">Lọc đơn đã khai báo</span>
+                          </p>
+                          <input type="checkbox" />
+                          <span class="checkmark"></span>
+                        </label>
+                      </div>
+                      <div class="table-normal-black">
+                        <table>
+                          <thead>
+                            <tr>
+                              <th width="20%" class="text-left fw-700">
+                                Mã đơn hàng
+                              </th>
+                              <th width="30%" class="text-left fw-700">
+                                Vận chuyển
+                              </th>
+                              <th width="15%" class="text-left fw-700">
+                                Giá trị
+                              </th>
+                              <th width="25%" class="text-right fw-700">
+                                Trạng thái
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="active">
+                              <th class="text-left">1077519746574495564</th>
+                              <th class="text-left">Shop đã phát hàng</th>
+                              <th class="text-left">¥56</th>
+                              <th class="text-right">Chưa khai báo</th>
+                            </tr>
+                            <tr>
+                              <th class="text-left">1077519746574495564</th>
+                              <th class="text-left">Shop đã phát hàng</th>
+                              <th class="text-left">¥56</th>
+                              <th class="text-right">Chưa khai báo</th>
+                            </tr>
+                            <tr>
+                              <th class="text-left">1077519746574495564</th>
+                              <th class="text-left">Shop đã phát hàng</th>
+                              <th class="text-left">¥56</th>
+                              <th class="text-right">Chưa khai báo</th>
+                            </tr>
+                            <tr>
+                              <th class="text-left">1077519746574495564</th>
+                              <th class="text-left">Shop đã phát hàng</th>
+                              <th class="text-left">¥56</th>
+                              <th class="text-right">Chưa khai báo</th>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="tab-content-require__body">
+                      <div class="form-group mb-10">
+                        <div class="form-input">
+                          <p>Kho đích</p>
+                          <div class="style-select-2">
+                            <select name="" id="">
+                              <option value="">Hà Nội</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="text-sub-gray mb-10">Chọn dịch vụ</p>
+                      <ul class="list-options">
+                        <li class="option">
+                          <label class="checkbox-style-2">
+                            <p
+                              class="text-and-icon"
+                              style="margin-top: -4px; margin-left: 2px"
+                            >
+                              <img src="images/icon/kiem-dem.svg" alt="" />
+                              <span class="text-color-main fz-14 ml-0"
+                                >Kiểm đếm</span
+                              >
+                              <a href="#" style="margin-bottom: 3px"
+                                ><img src="images/icon/help.svg" alt=""
+                              /></a>
+                            </p>
+                            <input type="checkbox" />
+                            <span class="checkmark top-5"></span>
+                          </label>
+                        </li>
+                        <li class="option">
+                          <label class="checkbox-style-2">
+                            <p class="text-and-icon" style="margin-top: -4px">
+                              <img src="images/icon/box-tick.svg" alt="" />
+                              <span class="text-color-main fz-14 ml-0"
+                                >Nẹp giấy</span
+                              >
+                              <a href="#" style="margin-bottom: 3px"
+                                ><img src="images/icon/help.svg" alt=""
+                              /></a>
+                            </p>
+                            <input type="checkbox" />
+                            <span class="checkmark top-5"></span>
+                          </label>
+                        </li>
+                        <li class="option">
+                          <label class="checkbox-style-2">
+                            <p class="text-and-icon" style="margin-top: -4px">
+                              <img src="images/icon/dong-go.svg" alt="" />
+                              <span class="text-color-main fz-14 ml-0"
+                                >Đóng gỗ</span
+                              >
+                              <a href="#" style="margin-bottom: 3px"
+                                ><img src="images/icon/help.svg" alt=""
+                              /></a>
+                            </p>
+                            <input type="checkbox" />
+                            <span class="checkmark top-5"></span>
+                          </label>
+                        </li>
+                        <li class="option">
+                          <label class="checkbox-style-2">
+                            <p class="text-and-icon" style="margin-top: -4px">
+                              <img
+                                src="images/icon/command-square.svg"
+                                alt=""
+                              />
+                              <span class="text-color-main fz-14 ml-0"
+                                >Quấn bọt khí</span
+                              >
+                              <a href="#" style="margin-bottom: 3px"
+                                ><img src="images/icon/help.svg" alt=""
+                              /></a>
+                            </p>
+                            <input type="checkbox" />
+                            <span class="checkmark top-5"></span>
+                          </label>
+                        </li>
+                        <li class="option">
+                          <label class="checkbox-style-2">
+                            <p class="text-and-icon" style="margin-top: -4px">
+                              <img src="images/icon/insurance.svg" alt="" />
+                              <span class="text-color-main fz-14 ml-0"
+                                >Bảo hiểm hàng hóa</span
+                              >
+                              <a href="#" style="margin-bottom: 3px"
+                                ><img src="images/icon/help.svg" alt=""
+                              /></a>
+                            </p>
+                            <input type="checkbox" />
+                            <span class="checkmark top-5"></span>
+                          </label>
+                        </li>
+                        <li class="option">
+                          <label class="checkbox-style-2">
+                            <p class="text-and-icon" style="margin-top: -4px">
+                              <img src="images/icon/receipt.svg" alt="" />
+                              <span class="text-color-main fz-14 ml-0"
+                                >Nhập khẩu chính ngạch</span
+                              >
+                              <a href="#" style="margin-bottom: 3px"
+                                ><img src="images/icon/help.svg" alt=""
+                              /></a>
+                            </p>
+                            <input type="checkbox" />
+                            <span class="checkmark top-5"></span>
+                          </label>
+                        </li>
+                      </ul>
+                      <button class="btn-green-flex">
+                        <span>Áp dụng</span>
+                        <i
+                          class="fa fa-angle-right fz-20"
+                          aria-hidden="true"
+                        ></i>
+                      </button>
+                    </div>
+
+                    <!-- <div class="empty hide">
+                      <p class="fz-24 fw-700">Danh sách trống</p>
+                      <p class="fz-18">
+                        Nhấn quét mã để cập nhật Danh sách đơn hàng
+                      </p>
+                    </div> -->
+                  </div>
+                  <div class="tab-content tab-content-require" id="chomavandon">
+                    <div class="tab-content-require__header">
+                      <div class="check-filter text-right mb-15 hide">
+                        <label class="checkbox-style-2">
+                          <p class="text-and-icon" style="margin-top: -4px">
+                            <!-- <img src="images/icon/1688.png" alt=""> -->
+                            <span class="fz-16">Lọc đơn đã khai báo</span>
+                          </p>
+                          <input type="checkbox" />
+                          <span class="checkmark"></span>
+                        </label>
+                      </div>
+                      <div class="table-normal-black">
+                        <table>
+                          <thead>
+                            <tr>
+                              <th width="20%" class="text-left fw-700">
+                                Mã đơn hàng
+                              </th>
+                              <th width="30%" class="text-left fw-700">
+                                Vận chuyển
+                              </th>
+                              <th width="15%" class="text-left fw-700">
+                                Giá trị
+                              </th>
+                              <th width="25%" class="text-right fw-700">
+                                Trạng thái
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="active">
+                              <th class="text-left">1077519746574495564</th>
+                              <th class="text-left">Shop đã phát hàng</th>
+                              <th class="text-left">¥56</th>
+                              <th class="text-right">Chưa khai báo</th>
+                            </tr>
+                            <tr>
+                              <th class="text-left">1077519746574495564</th>
+                              <th class="text-left">Shop đã phát hàng</th>
+                              <th class="text-left">¥56</th>
+                              <th class="text-right">Chưa khai báo</th>
+                            </tr>
+                            <tr>
+                              <th class="text-left">1077519746574495564</th>
+                              <th class="text-left">Shop đã phát hàng</th>
+                              <th class="text-left">¥56</th>
+                              <th class="text-right">Chưa khai báo</th>
+                            </tr>
+                            <tr>
+                              <th class="text-left">1077519746574495564</th>
+                              <th class="text-left">Shop đã phát hàng</th>
+                              <th class="text-left">¥56</th>
+                              <th class="text-right">Chưa khai báo</th>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="tab-content-require__body hide">
+                      <div class="form-group mb-10">
+                        <div class="form-input">
+                          <p>Kho đích</p>
+                          <div class="style-select-2">
+                            <select name="" id="">
+                              <option value="">Hà Nội</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="text-sub-gray mb-10">Chọn dịch vụ</p>
+                      <ul class="list-options">
+                        <li class="option">
+                          <label class="checkbox-style-2">
+                            <p
+                              class="text-and-icon"
+                              style="margin-top: -4px; margin-left: 2px"
+                            >
+                              <img src="images/icon/kiem-dem.svg" alt="" />
+                              <span class="text-color-main fz-14 ml-0"
+                                >Kiểm đếm</span
+                              >
+                              <a href="#" style="margin-bottom: 3px"
+                                ><img src="images/icon/help.svg" alt=""
+                              /></a>
+                            </p>
+                            <input type="checkbox" />
+                            <span class="checkmark top-5"></span>
+                          </label>
+                        </li>
+                        <li class="option">
+                          <label class="checkbox-style-2">
+                            <p class="text-and-icon" style="margin-top: -4px">
+                              <img src="images/icon/box-tick.svg" alt="" />
+                              <span class="text-color-main fz-14 ml-0"
+                                >Nẹp giấy</span
+                              >
+                              <a href="#" style="margin-bottom: 3px"
+                                ><img src="images/icon/help.svg" alt=""
+                              /></a>
+                            </p>
+                            <input type="checkbox" />
+                            <span class="checkmark top-5"></span>
+                          </label>
+                        </li>
+                        <li class="option">
+                          <label class="checkbox-style-2">
+                            <p class="text-and-icon" style="margin-top: -4px">
+                              <img src="images/icon/dong-go.svg" alt="" />
+                              <span class="text-color-main fz-14 ml-0"
+                                >Đóng gỗ</span
+                              >
+                              <a href="#" style="margin-bottom: 3px"
+                                ><img src="images/icon/help.svg" alt=""
+                              /></a>
+                            </p>
+                            <input type="checkbox" />
+                            <span class="checkmark top-5"></span>
+                          </label>
+                        </li>
+                        <li class="option">
+                          <label class="checkbox-style-2">
+                            <p class="text-and-icon" style="margin-top: -4px">
+                              <img
+                                src="images/icon/command-square.svg"
+                                alt=""
+                              />
+                              <span class="text-color-main fz-14 ml-0"
+                                >Quấn bọt khí</span
+                              >
+                              <a href="#" style="margin-bottom: 3px"
+                                ><img src="images/icon/help.svg" alt=""
+                              /></a>
+                            </p>
+                            <input type="checkbox" />
+                            <span class="checkmark top-5"></span>
+                          </label>
+                        </li>
+                        <li class="option">
+                          <label class="checkbox-style-2">
+                            <p class="text-and-icon" style="margin-top: -4px">
+                              <img src="images/icon/insurance.svg" alt="" />
+                              <span class="text-color-main fz-14 ml-0"
+                                >Bảo hiểm hàng hóa</span
+                              >
+                              <a href="#" style="margin-bottom: 3px"
+                                ><img src="images/icon/help.svg" alt=""
+                              /></a>
+                            </p>
+                            <input type="checkbox" />
+                            <span class="checkmark top-5"></span>
+                          </label>
+                        </li>
+                        <li class="option">
+                          <label class="checkbox-style-2">
+                            <p class="text-and-icon" style="margin-top: -4px">
+                              <img src="images/icon/receipt.svg" alt="" />
+                              <span class="text-color-main fz-14 ml-0"
+                                >Nhập khẩu chính ngạch</span
+                              >
+                              <a href="#" style="margin-bottom: 3px"
+                                ><img src="images/icon/help.svg" alt=""
+                              /></a>
+                            </p>
+                            <input type="checkbox" />
+                            <span class="checkmark top-5"></span>
+                          </label>
+                        </li>
+                      </ul>
+                      <button class="btn-green-flex">
+                        <span>Áp dụng</span>
+                        <i
+                          class="fa fa-angle-right fz-20"
+                          aria-hidden="true"
+                        ></i>
+                      </button>
+                    </div>
+
+                    <div class="empty hide">
+                      <p class="fz-24 fw-700">Danh sách trống</p>
+                      <p class="fz-18">
+                        Nhấn quét mã để cập nhật Danh sách đơn hàng
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar-right__body is-login hide">
+                <p class="text-center mb-20">
+                  Vui lòng đăng nhập tài khoản VMT để sử dụng dịch vụ<br />
+                  Bạn chưa có tài khoản?
+                  <a href="#" class="text-color-main">Đăng ký ngay</a>
+                </p>
+                <div class="form-group-login text-center">
+                  <div class="form-input">
+                    <input
+                      type="text"
+                      class="style-input"
+                      placeholder="ID Tài khoản"
+                    />
+                  </div>
+                  <div class="form-input">
+                    <input
+                      type="password"
+                      class="style-input"
+                      placeholder="Mật khẩu"
+                    />
+                  </div>
+                  <div class="form-bottom">
+                    <div class="remember">
+                      <label class="checkbox-style-2">
+                        <p class="text-and-icon" style="margin-top: -4px">
+                          <!-- <img src="images/icon/1688.png" alt=""> -->
+                          <span class="fz-14 text-sub-gray">Nhớ mật khẩu</span>
+                        </p>
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                    <div class="forgot">
+                      <a href="#" class="text-sub-gray">Quên mật khẩu ?</a>
+                    </div>
+                  </div>
+                  <button class="btn-green-flex">
+                    <span>Đăng nhập</span>
+                    <i class="fa fa-angle-right fz-20" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="sidebar-right__body is-email hide">
+                <p class="text-center mb-20">
+                  <b>TIP:</b> Khách hàng nên ưu tiên chọn những email nào ở
+                  trạng thái <span class="text-color-main">TỐT</span> để việc
+                  thanh toán diễn ra nhanh chóng hơn.
+                </p>
+                <div class="exchange-rate">
+                  <p>Tỉ giá: 4.000đ</p>
+                  <p class="text-and-icon">
+                    <img src="images/icon/refresh.svg" alt="" />
+                    <span class="fw-700 text-color-main"
+                      >Cập nhật danh sách</span
+                    >
+                  </p>
+                </div>
+                <div class="table-normal-black">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th width="50%" class="text-left">Email</th>
+                        <th width="50%" class="text-left">Trạng thái</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th class="text-left">tth1vominhthien@gmail.com</th>
+                        <th class="status text-left">
+                          <div class="text">
+                            <p>Tốt</p>
+                            <div
+                              class="line"
+                              style="width: 20px; background: #1a8917"
+                            ></div>
+                          </div>
+                          <button class="btn-green-boder active">
+                            Đã chọn
+                          </button>
+                        </th>
+                      </tr>
+                      <tr>
+                        <th class="text-left">tth1vominhthien@gmail.com</th>
+                        <th class="status text-left">
+                          <div class="text">
+                            <p>Tốt</p>
+                            <div
+                              class="line"
+                              style="width: 25px; background: #1a8917"
+                            ></div>
+                          </div>
+                          <button class="btn-green-boder">Chọn</button>
+                        </th>
+                      </tr>
+                      <tr>
+                        <th class="text-left">tth1vominhthien@gmail.com</th>
+                        <th class="status text-left">
+                          <div class="text">
+                            <p>Trung bình</p>
+                            <div
+                              class="line"
+                              style="width: 40px; background: #ff993e"
+                            ></div>
+                          </div>
+                          <button class="btn-green-boder">Đã chọn</button>
+                        </th>
+                      </tr>
+                      <tr>
+                        <th class="text-left">tth1vominhthien@gmail.com</th>
+                        <th class="status text-left">
+                          <div class="text">
+                            <p>Quá tải</p>
+                            <div
+                              class="line"
+                              style="width: 50px; background: #c05a00"
+                            ></div>
+                          </div>
+                          <button class="btn-green-boder">Đã chọn</button>
+                        </th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="sidebar-right__body create-tth">
+                <p class="mb-20">
+                  Khách hàng vui lòng chờ trong giấy lát để hệ thống cập
+                  nhật link thanh toán.
+                </p>
+                <div class="form-form">
+                  <div class="form-input mb-10">
+                    <textarea
+                      class="style-input"
+                      name=""
+                      id=""
+                      cols="30"
+                      rows="5"
+                      placeholder="Thêm ghi chú"
+                    ></textarea>
+                  </div>
+                  <!-- <button class="btn-green-flex">
+                    Hoàn thành
+                  </button> -->
+                  <button class="btn-wating-gray">Đang cập nhật (3s)</button>
+                </div>
+              </div>
+              <button class="btn-slideright" id="btn-slideright">
+                <p class="text">
+                  <i class="fa fa-angle-up" aria-hidden="true"></i>
+                  <span class="open">MỞ RỘNG</span>
+                  <span class="close">THU GỌN</span>
+                </p>
+              </button>
+            </div>
+            <div class="sidebar-bottom">
+              <div class="wrap-sidebar-bottom">
+                <div class="sidebar-bottom__left">
+                  <p class="text-and-icon">
+                    <img src="images/icon/Group 492.svg" alt="" />
+                    <span class="text-color-white">THANH TOÁN</span>
+                  </p>
+                </div>
+                <div class="sidebar-bottom__right">
+                  <div class="form-group hide">
+                    <div class="row">
+                      <div class="col-6 col-sm-12">
+                        <div class="form-input">
+                          <div class="style-select-2">
+                            <select name="" id="">
+                              <option value="">Chọn danh mục hàng hóa</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-12">
+                        <div class="form-input">
+                          <input
+                            type="text"
+                            class="style-input"
+                            placeholder="Nhập ghi chú"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="shopping-cart hide">
+                    <div class="shopping-cart__add">
+                      <button class="btn-orange">
+                        <svg
+                          width="25"
+                          height="25"
+                          viewBox="0 0 25 25"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0.669045 1.57432C0.989715 1.09197 1.6407 0.960894 2.12306 1.28156L6.84661 4.42178C7.07036 4.57053 7.22849 4.79948 7.28837 5.06141L9.73865 15.7784L18.6045 15.7669L19.2187 13.6686L12.0451 13.6779C11.4659 13.6786 10.9957 13.2097 10.995 12.6305C10.9942 12.0512 11.4632 11.5811 12.0424 11.5803L19.8329 11.5702L20.6007 8.94733L12.039 8.9584C11.4598 8.95915 10.9896 8.49021 10.9889 7.91099C10.9881 7.33177 11.457 6.86161 12.0363 6.86086L21.9996 6.84796C22.3301 6.84754 22.6415 7.00295 22.8399 7.26733C23.0382 7.53172 23.1004 7.87415 23.0075 8.19136L20.3971 17.1093C20.2664 17.5558 19.8572 17.8629 19.3919 17.8635L8.9042 17.8771C8.41453 17.8777 7.98959 17.5394 7.88045 17.062L5.33686 5.93687L0.961804 3.02833C0.479447 2.70766 0.348374 2.05668 0.669045 1.57432Z"
+                            fill="white"
+                          />
+                          <path
+                            d="M11.5299 20.7578C11.5312 21.7714 10.7105 22.5942 9.69689 22.5955C8.68325 22.5968 7.86047 21.7762 7.85916 20.7625C7.85785 19.7489 8.6785 18.9261 9.69214 18.9248C10.7058 18.9235 11.5286 19.7441 11.5299 20.7578Z"
+                            fill="white"
+                          />
+                          <path
+                            d="M20.4444 20.7462C20.4458 21.7599 19.6251 22.5826 18.6115 22.584C17.5978 22.5853 16.775 21.7646 16.7737 20.751C16.7724 19.7373 17.5931 18.9146 18.6067 18.9133C19.6204 18.9119 20.4431 19.7326 20.4444 20.7462Z"
+                            fill="white"
+                          />
+                        </svg>
+                        <span>Thêm vào giỏ hàng</span>
+                      </button>
+                    </div>
+                    <div class="shopping-cart__read">
+                      <a href="#" class="text-and-icon text-color-white">
+                        <span>Xem giỏ hàng</span>
+                        <i
+                          class="fa fa-angle-right fz-20"
+                          aria-hidden="true"
+                        ></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="form-group-discount hide">
+                    <div class="row">
+                      <div class="col-6 col-sm-12">
+                        <div class="form-input">
+                          <p>CHIẾT KHẤU/SP</p>
+                          <input
+                            type="text"
+                            class="style-input"
+                            placeholder="16.01 Y"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-12">
+                        <div class="form-input">
+                          <p>TỔNG CHIẾT KHẤU</p>
+                          <input
+                            type="text"
+                            class="style-input"
+                            placeholder="160"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="create-link hide">
+                    <button class="btn-orange">
+                      <svg
+                        width="26"
+                        height="25"
+                        viewBox="0 0 26 25"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.5114 17.5905L12.514 19.5931C10.5835 21.5286 7.4495 21.5326 5.514 19.6022C3.57851 17.6717 3.57445 14.5377 5.50494 12.6022L7.50236 10.5996C9.43285 8.66408 12.5669 8.66002 14.5023 10.5905C14.8091 10.8965 15.0673 11.2327 15.277 11.5895M11.4972 6.5944L13.4946 4.59181C15.4251 2.65632 18.5591 2.65226 20.4946 4.58276C22.4301 6.51325 22.4341 9.64726 20.5036 11.5828L18.5062 13.5853C16.5757 15.5208 13.4417 15.5249 11.5062 13.5944C11.1995 13.2884 10.9412 12.9523 10.7315 12.5954"
+                          stroke="white"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <span>TẠO LINK TIẾP THỊ</span>
+                    </button>
+                  </div>
+                  <label class="checkbox-style-2 hide">
+                    <p class="text-and-icon" style="margin-top: -4px">
+                      <!-- <img src="images/icon/1688.png" alt=""> -->
+                      <span class="fz-14">Dịch tự động</span>
+                    </p>
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <div class="code-scan hide">
+                    <p class="text-color-white">
+                      Trạng thái: 5/10 đơn có thể khai báo
+                    </p>
+                    <button class="btn-orange">
+                      <svg
+                        width="25"
+                        height="25"
+                        viewBox="0 0 25 25"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M1.96542 10.5605C1.95863 5.31386 6.20644 1.05504 11.4531 1.04825C16.6998 1.04146 20.9586 5.28927 20.9654 10.536C20.9683 12.7991 20.1797 14.8784 18.8607 16.512L22.5385 20.1804C22.9296 20.5704 22.9304 21.2035 22.5404 21.5946C22.1504 21.9856 21.5172 21.9864 21.1262 21.5964L17.4483 17.928C15.8181 19.2512 13.7408 20.0453 11.4777 20.0482C6.23102 20.055 1.97221 15.8072 1.96542 10.5605ZM11.4557 3.04825C7.31359 3.05361 3.96006 6.41584 3.96542 10.558C3.97078 14.7001 7.33301 18.0536 11.4751 18.0482C15.6172 18.0429 18.9708 14.6807 18.9654 10.5385C18.96 6.39643 15.5978 3.04289 11.4557 3.04825ZM7.92466 6.51724C8.82725 5.61238 10.0779 5.05004 11.4583 5.04825C12.8387 5.04646 14.0908 5.60556 14.9957 6.50812C15.3867 6.89813 15.3875 7.5313 14.9975 7.92233C14.6075 8.31336 13.9743 8.31418 13.5833 7.92416C13.0386 7.38089 12.2896 7.04718 11.4609 7.04825C10.6322 7.04932 9.88399 7.38497 9.34065 7.92967C8.95062 8.32069 8.31746 8.32149 7.92644 7.93145C7.53542 7.54142 7.53463 6.90826 7.92466 6.51724Z"
+                          fill="white"
+                        />
+                      </svg>
+                      <span>Quét mã</span>
+                    </button>
+                  </div>
+                  <div class="text-inside hide">
+                    <p class="text-and-icon text-color-white">
+                      <img src="images/icon/Support2.svg" alt="" />
+                      <span
+                        ><b>TIP:</b>Khách hàng có thể gộp nhiều yêu cầu thanh
+                        toán để có tỉ giá tốt hơn</span
+                      >
+                    </p>
+                  </div>
+                  <div class="choose-email">
+                    <div
+                      class="choose-email__text text-color-white"
+                      style="border-right: 2px solid white"
+                    >
+                      <p class="text-right">
+                        <b>Đã gộp 04 yêu cầu</b><br />TIP: Khách hàng có thể gộp
+                        nhiều yêu cầu thanh toán để có tỉ giá tốt hơn
+                      </p>
+                    </div>
+
+                    <div class="choose-email__text text-color-white">
+                      <p><b>Thành tiền</b><br />(¥1 = 4.000 vnđ)</p>
+                      <p>
+                        <b><span class="fz-18">152.000đ</span></b> (¥38)
+                      </p>
+                    </div>
+                    <div class="choose-email__button hide">
+                      <button class="btn-orange">
+                        <svg
+                          width="25"
+                          height="25"
+                          viewBox="0 0 25 25"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M17.9849 21.3663L7.98487 21.3793C4.33488 21.384 2.23216 19.2867 2.22744 15.6367L2.21838 8.63671C2.21366 4.98672 4.31094 2.884 7.96093 2.87928L17.9609 2.86634C21.6109 2.86161 23.7136 4.95889 23.7184 8.60889L23.7274 15.6089C23.7321 19.2589 21.6349 21.3616 17.9849 21.3663ZM7.96287 4.37928C5.10288 4.38298 3.71468 5.77478 3.71838 8.63477L3.72744 15.6348C3.73114 18.4948 5.12293 19.883 7.98293 19.8793L17.9829 19.8663C20.8429 19.8626 22.2311 18.4708 22.2274 15.6108L22.2184 8.61083C22.2147 5.75083 20.8229 4.36263 17.9629 4.36634L7.96287 4.37928Z"
+                            fill="white"
+                          />
+                          <path
+                            d="M12.9735 12.9934C12.1335 12.9945 11.2832 12.7356 10.6325 12.2064L7.49928 9.71046C7.17894 9.45088 7.11834 8.98095 7.37792 8.66062C7.63751 8.34028 8.10744 8.27968 8.42777 8.53926L11.561 11.0352C12.3218 11.6442 13.6118 11.6426 14.371 11.0316L17.4978 8.52753C17.8174 8.26711 18.2975 8.31649 18.5479 8.64616C18.8083 8.96583 18.759 9.44589 18.4293 9.69632L15.3025 12.2004C14.6632 12.7312 13.8135 12.9923 12.9735 12.9934Z"
+                            fill="white"
+                          />
+                        </svg>
+                        <span>Chọn email thanh toán hộ</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-up-sidebar" id="btn-up">
+                <i class="fa fa-angle-up" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          <!-- /// -->
+        </main>
+      </div>
+      <!-- Footer -->
+      <footer class="footer"></footer>
+    </div>
+    <script src="js/library/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.min.js"></script>
+    <!-- <script src="js/main.js" type="module"></script> -->
+    <script src="js/main-2.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const btnUp = document.getElementById("btn-up");
+
+        if (btnUp) {
+          btnUp.addEventListener("click", (e) => {
+            e.preventDefault();
+            btnUp.classList.toggle("active");
+            btnUp.parentElement.classList.toggle("active");
+          });
+        }
+
+        const btnSlideRight = document.getElementById("btn-slideright");
+
+        if (btnSlideRight) {
+          btnSlideRight.addEventListener("click", (e) => {
+            e.preventDefault();
+            btnSlideRight.classList.toggle("active");
+            btnSlideRight.parentElement.classList.toggle("active");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
+<!-- <p class="list-row" style="--background: url('../images/icon-list.png'); --width: 40px; --height: 40px">List row</p> -->
+<!-- <a href="#" data-tooltip="Test tooltip">tooltip</a> -->

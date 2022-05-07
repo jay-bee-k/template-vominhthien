@@ -640,9 +640,13 @@ textarea.style-input {
     width: 20%;
     padding: 5px;
   }
+  .col-3 {
+    width: 25%;
+    padding: 5px;
+  }
   .col-sm-12 {
     @include max-media(500px) {
-      width: 100%;
+      width: 100% !important;
       padding: 5px;
     }
   }
@@ -693,6 +697,14 @@ textarea.style-input {
   border-radius: 10px;
 }
 
+.tag-green-2 {
+  background-color: $main-color;
+  color: #fff;
+  padding: 8px 32px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
 .tag-orange {
   background-color: $orange;
   color: #fff;
@@ -728,6 +740,12 @@ textarea.style-input {
       margin-left: 40px;
     }
   }
+  .table-normal {
+    table {
+      width: 100% !important;
+      min-width: 577px !important;
+    }
+  }
 }
 .card-servicedetail {
   &__body {
@@ -755,6 +773,7 @@ textarea.style-input {
     thead {
       th {
         padding: 3px;
+        height: 48px;
         background: linear-gradient(180deg, #ffffff 0%, #e9e9e9 100%);
       }
     }
@@ -771,6 +790,29 @@ textarea.style-input {
           border-bottom: 0;
           border-top: 1px solid $main-color-bold;
         }
+      }
+    }
+    .have-note {
+      position: relative;
+      th {
+        padding-bottom: 40px;
+      }
+      &::after {
+        content: attr(data-note);
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+      }
+    }
+  }
+  &.border-bottom-0 {
+    tr {
+      &:nth-child(odd) {
+        border-bottom: 1px solid #d5d6de;
+      }
+      &:last-child {
+        border-bottom: 0;
+        border-top: 1px solid #d5d6de;
       }
     }
   }
@@ -897,5 +939,70 @@ textarea.style-input {
   }
   span {
     margin-left: 5px;
+  }
+}
+
+.table-green-main {
+  width: 100%;
+  overflow: auto;
+  table {
+    width: 100%;
+    min-width: 700px;
+    max-width: unset;
+    background-color: #ffffff;
+    border-radius: 15px;
+    thead {
+      th {
+        padding: 10px;
+        background-color: $main-color-bold;
+        color: #fff;
+        &:first-child {
+          border-radius: 15px 0px 0 0;
+        }
+        &:last-child {
+          border-radius: 0px 15px 0 0;
+        }
+      }
+    }
+    tbody {
+      td {
+        padding: 10px;
+        border-bottom: 1px solid $gray;
+        .disable {
+          color: $gray-hover;
+          svg {
+            path {
+              stroke: $gray-hover;
+            }
+          }
+        }
+      }
+      tr {
+        &:last-child {
+          td {
+            &:first-child {
+              border-radius: 0 0 0 15px;
+            }
+            &:last-child {
+              border-radius: 0 0 15px 0;
+            }
+          }
+        }
+      }
+      .exp-line {
+        width: 100px;
+        height: 4px;
+        border-radius: 200px;
+        background-color: $gray;
+        position: relative;
+        .persent-exp {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          border-radius: 200px;
+        }
+      }
+    }
   }
 }

@@ -11,7 +11,7 @@
 .container-maincontent {
   width: 1200px;
   max-width: 100%;
-  margin: auto;
+  margin: 50px auto;
   padding: 0 15px;
   @include max-media($width-responsive-sidebar) {
     width: 100%;
@@ -56,10 +56,16 @@
     &.active {
       transform: translateX(0);
     }
+    @include max-media(1560px) {
+      width: 250px;
+    }
   }
   .maincontent {
     display: inline-block;
     width: calc(100% - 280px);
+    @include max-media(1560px) {
+      width: calc(100% - 250px);
+    }
     @include max-media($width-responsive-sidebar) {
       width: 100%;
     }

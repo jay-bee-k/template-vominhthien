@@ -169,6 +169,14 @@
     align-items: center;
   }
 
+  .checkbox-style-2:hover input ~ .checkmark {
+    border-color: $orange;
+  }
+  .checkbox-style-2 input:checked ~ .checkmark {
+    background-color: unset;
+    background-image: url(../images/icon/check3.svg);
+  }
+
   .btn-up-sidebar {
     position: absolute;
     top: 0;

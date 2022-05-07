@@ -30,6 +30,11 @@ document.addEventListener("DOMContentLoaded", () => {
           legend: {
             display: false,
           },
+          elements: {
+            arc: {
+              borderWidth: 0,
+            },
+          },
           rotation: 0.5 * Math.PI - (25 / 45) * Math.PI,
         },
       }
@@ -229,3 +234,69 @@ $(".list-props-2 .item-props").click(function () {
   $(".list-props-2 .item-props").removeClass("active");
   $(this).addClass("active");
 });
+
+// const $ = jQuery.noConflict();
+/** MAGNIFICPOPUP */
+$(document).on("click", ".open-popup-btn", function (e) {
+  e.preventDefault();
+  const link = $(this).attr("href") || $(this).attr("data-mfp-src");
+  $.magnificPopup.open({
+    items: {
+      src: link,
+    },
+    type: "inline",
+    modal: false, // CLOSE POPUP WHEN CLICK OUTSIDE
+    midClick: true,
+    removalDelay: 500, // DELAY BEFORE CLOSE POPUP
+    preloader: false,
+    fixedBgPos: true, // SET HEIGHT BACKGROUND FIX WITH CONTENT
+    fixedContentPos: false, // FIXED CONTENT AT CLICKED POSITION
+    callbacks: {
+      beforeOpen: function () {
+        this.st.mainClass = "mfp-zoom-in";
+      },
+      open: function () {
+        $("body").css("overflow", "hidden");
+        $(".popup-wrap").removeClass(".mfp-hide");
+      },
+      close: function () {
+        $("body").css("overflow", "");
+      },
+    },
+  });
+});
+$(document).on(
+  "click",
+  ".open-video-btn, .video-popup, .video-btn, .video-btn-2, .c-video .main-title[data-mfp-src]",
+  function (e) {
+    e.preventDefault();
+    let link =
+      $(this).attr("href") ||
+      $(this).attr("data-mfp-src") ||
+      "https://www.youtube.com/watch?v=C3QKB74zaD8";
+
+    $.magnificPopup.open({
+      disableOn: 700,
+      items: {
+        src: link,
+        type: "iframe",
+      },
+      mainClass: "mfp-zoom-in",
+      removalDelay: 160,
+      preloader: false,
+      fixedContentPos: false,
+      callbacks: {
+        beforeOpen: function () {
+          this.st.mainClass = "mfp-zoom-in";
+        },
+        open: function () {
+          $("body").css("overflow", "hidden");
+        },
+        close: function () {
+          $("body").css("overflow", "auto");
+        },
+      },
+    });
+  }
+);
+/** MAGNIFICPOPUP - END*/
